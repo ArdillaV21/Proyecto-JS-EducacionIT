@@ -3,7 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Declaraciones</title>
+    <script>
+        /* Variables: es un espacio en memoria que almacena un valor y se puede modificar.
+
+        REGLAS DE NOMENCLATURA
+        - Admite letras, numeros y simbolos $ y _
+        - No puede empezar con un numero
+        - Deben ser escritas en camelCase
+        - No deben coincidir con las palabras reservadas del lenguaje
+
+        |carac        | var   | let    | const |
+        |-------------|-------|--------|-------|
+        |ambito       |funcion|bloque  |bloque |
+        |redeclarable |si     |no      |no     |
+        |redefinible  |si     |si      |no     |
+
+        */
+       /*TIPOS DE DATOS
+
+       - Primitivos:
+        - String cadena de caracteres
+        - Number numero entero o decimal
+        - Boolean valor logico admite true o false
+        - Null Dato vacio intencionalmente
+        - Undefined variable sin definir
+        - Symbol valor unico e inmutable
+        - NaN valor numerico que no es valido
+
+        COMPLEJOS (MUTABLES)
+        - Object{} Elemento que almacena propiedades y valores
+        - Array[] Lista de datos
+        - Function() Conjunto de sentencias para realizar una tarea
+
+       */
+      {
+        confirm("Bienvenido al curso de JS \n ¿Te puedo hacer unas preguntas?");
+        alert("Respeto tu decision, pero es necesario que contestes algunas preguntas");
+        //Entrada
+        const nombre = prompt("¿Cual es tu nombre?");
+        const edad = prompt("¿Cual es tu Edad?");
+        //Proceso
+        const mensaje = `Bienvenido ${nombre} a este curso de JS \n veo que tienes ${edad} años`;
+
+        //Salida
+        alert(mensaje);
+      }
+    </script>
 </head>
 <body>
     
