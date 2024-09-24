@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        {
+            const numero1 = prompt("Ingrese el primer numero");
+            const numero2 = prompt("Ingrese el segundo numero");
+
+
+            const suma = parseInt(numero1) + parseInt(numero2);
+            const resta = numero1 - numero2;
+            const multiplicacion = numero1 * numero2;
+            let division = "indeterminado";
+            if(numero2 != 0) division = numero1 / numero2;
+            
+            if(numero1 >= 0 && numero2 >= 0){
+                let mensaje = `La suma de ${numero1} y ${numero2} es ${suma} \n La resta de ${numero1} y ${numero2} es ${resta} \n La multiplicacion de ${numero1} y ${numero2} es ${multiplicacion} \n La division de ${numero1} y ${numero2} es ${division}`;
+            }
+            else{
+                mensaje = `Los valores ${numero1} y ${numero2} no se puede hacer operaciones con dichos valores, usa numeros positivos`;
+            }
+
+            alert(mensaje);
+        }
+    </script>
+</body>
+</html>
