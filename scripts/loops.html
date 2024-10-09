@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bucles</title>
+</head>
+<body>
+    <script>
+    {
+        let n = 1;
+        const tabla = prompt("¿ingrese un numero para crear la tabla de potencias?")
+        let acumulador = "la tabla del "+ tabla +" es la siguiente:\n"
+        // Mientras n sea menor o igual a 10
+        while(n <= 10){
+            acumulador += tabla+"^"+n+"="+(tabla ** n)+"\n"
+            n++
+        }
+        alert(acumulador)
+    }
+    {
+        let mensaje="", n = 1;
+        const simpsonsRef = prompt("escribe el mensaje de castigo");
+        const repeticiones = parseInt(prompt("¿escribe un numero del 1 al 100?"));
+        do{
+            mensaje+= simpsonsRef + " ";
+            n++
+        }
+        while(n <= repeticiones)
+        alert(mensaje);
+    }
+    {
+        let balance = 1000, ammount = 0, option, message;
+        do{
+            option = (prompt("Bienvenido a DigiBank, elija la accion que desea realizar:\n1) CONSULTAR\n2) DEPOSITAR\n3) RETIRAR\n4) SALIR")).toUpperCase();
+
+            switch(option){
+                case "1":
+                case "C":
+                case "CONSULTAR":
+                    message = "Su saldo actual es de $"+balance;
+                break;
+                case "2":
+                case "D":
+                case "DEPOSITAR":
+                    ammount = parseFloat(prompt("¿Cual es el monto a depositar?"));
+                    if (ammount > 0) {
+                        balance += ammount;
+                        message = "el deposito fue exitoso, su saldo actual es de $"+balance;
+                    }
+                    else message = "debe ingresar un numero mayor a 0, vuelva a intentar"
+                break;
+                case "3":
+                case "R":
+                case "EXTRAER":
+                case "RETIRAR":
+                    ammount = parseFloat(prompt("¿Cual es el monto a extraer?"));
+                    if (ammount > 0 && ammount <= balance){
+                        balance-=ammount;
+                        message="extraccion exitosa, su saldo actual es de $"+balance;
+                    }
+                    else message = "operacion rechazada, solamente puede retirar hasta $"+balance;
+                break;
+                case "4":
+                case "S":
+                case "SALIR":
+                    message = "Muchas gracias por utilizar nuestros servicios, DigiBank le desea un excelente dia."
+                break;
+                default:
+                    message = "Lo sentimos, pero no se reconoce la opcion seleccionada.\nPor favor vuelva a intentar"
+            }
+            alert(message);
+        }
+        while(option != 4)
+    }
+    </script>
+</body>
+</html>
